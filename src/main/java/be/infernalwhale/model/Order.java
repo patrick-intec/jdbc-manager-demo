@@ -1,6 +1,7 @@
 package be.infernalwhale.model;
 
 import java.sql.Date;
+import java.util.List;
 
 public class Order {
     private int id;
@@ -12,6 +13,7 @@ public class Order {
     private boolean vatFree;
     private boolean send;
     private Date orderDate;
+    private List<Product> products;
 
     public int getId() {
         return id;
@@ -91,6 +93,15 @@ public class Order {
 
     public Order setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
+        return this;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public Order setProducts(List<Product> products) {
+        this.products = products;
         return this;
     }
 
